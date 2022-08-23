@@ -1,0 +1,83 @@
+
+<div class="body">
+    <div class="text">
+        <h1>Learn to code by watching others</h1>
+        <p>see how experienced developers solve problems in real-time.
+           Waching scripted tutorials is great, but understanding how
+            developers think is invaluable.</p>
+    </div>
+    <div class="reactive">
+        <button class="trail">Try it free 7days then $20/mo. thereafter</button>
+        <form action="" [formGroup]="loginForm" name="form" (ngSubmit)="collectData()"  required >
+            <label for="firstName"> 
+             <!-- <span 
+                class="text-danger" 
+                *ngIf="loginForm.get('firstName').errors && 
+                loginForm.get('firstName').hasError('required')"
+             >*</span> -->
+                <input type="text" name="firstName" id="firstName" class="form-control"
+                formControlName="firstName"
+                placeholder="Jonathan"
+
+               
+                autofocus>
+               
+            </label>
+
+             <!-- // show error message -->
+             <div *ngIf="loginForm.controls['firstName'].invalid && 
+             (loginForm.controls['firstName'].dirty || 
+             loginForm.controls['firstName'].touched)" class="alert">
+                <span *ngIf="loginForm.controls['firstName'].errors.required">
+                Please enter first name
+              </span>
+            </div> 
+             
+          
+            <label for="lastName">
+                <input type="text" name="v" id="lastName"
+                formControlName="lastName"
+                placeholder="last name">
+                
+            </label>
+            <div *ngIf="loginForm.controls['lastName'].invalid && 
+             (loginForm.controls['lastName'].dirty || 
+             loginForm.controls['lastName'].touched)" class="alert">
+                <span *ngIf="loginForm.controls['lastName'].errors.required">
+                Please enter last name
+              </span>
+            </div>
+          
+            <label for="email">
+                <input type="email" name="email" id="email"
+                formControlName="email"
+                placeholder="email"
+                >
+            </label>
+            <div *ngIf="loginForm.controls['email'].invalid && 
+             (loginForm.controls['email'].dirty || 
+             loginForm.controls['email'].touched)" class="alert">
+                <span *ngIf="loginForm.controls['email'].errors.required">
+                Please enter your email
+              </span>
+            </div>
+          
+            <label for="password">
+                <input type="password" name="password" id="password"
+                formControlName="password"
+                placeholder="password">
+            </label>
+            <div *ngIf="loginForm.controls['password'].invalid && 
+             (loginForm.controls['password'].dirty || 
+             loginForm.controls['password'].touched)" class="alert">
+                <span *ngIf="loginForm.controls['password'].errors.required">
+                Please enter your valid pasword
+              </span>
+            </div>
+            
+            <button type="submit" [disabled]="loginForm.invalid"> CLAIM YOUR FREE TRAIL </button>
+            <P>By clicking the button you are agreeing to out <Span>Terms and Services</Span></P>
+        </form>
+    </div>
+</div>
+<!-- [disabled]="loginForm.invalid" -->

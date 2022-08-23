@@ -1,0 +1,238 @@
+:host {
+    margin: 0;
+    padding: 0;
+ 
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.body{
+    margin: 0;
+    padding: 0;
+    height: 80vh;
+    width: 70vw;
+    background-color: #f25957;
+    background-image: url("src/images/bg-intro-desktop.png");
+    background-repeat: repeat;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+   
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.text {
+    height: 60%;
+    width: 40%;
+    color: white; 
+    margin-left: 40px;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 30px;
+}
+
+.text p {
+    color: rgb(224, 226, 227);
+}
+
+.reactive {
+    height: 60%;
+    width: 40%;
+    box-sizing: border-box;
+    padding: 0 40px;
+
+    margin-right: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.trail {
+    background-color: rgb(38, 38, 139); 
+    color: white;
+    padding: 14px; 
+    width:100%;
+    border: none;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+ }
+
+ .trail:hover {
+    background-color: rgb(63, 63, 226); 
+ }
+
+form {
+    border-radius: 12px;
+    height: 70%;
+    background-color: rgb(249, 248, 251);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 40px;
+    box-shadow: rgba(0, 0, 0, 0.20) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+input {
+    width:93%;
+    height: 40px;
+    border-radius: 6px;
+    outline: none;
+    border: 1px solid lightGrey;
+    padding-inline-start: 20px;
+    
+}
+
+/* input:last-child {
+    margin-bottom: 20px;
+} */
+
+form span {
+    font-size: 10px;
+    margin-bottom: 20px;
+}
+
+button[type=submit]{
+    background-color: rgb(60, 192, 93); 
+    color: white;
+    padding: 12px 10px;
+    border-radius: 6px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+button[type=submit]:hover{
+    background-color: rgb(25, 123, 49);
+}
+
+form  p {
+    font-size: 10px;
+    color: rgb(182, 180, 180);
+}
+form span {
+    color: #f25957;
+}
+
+
+@media only screen and (max-width: 1400px) {
+    .reactive {
+        height: 65%;
+        width: 42%;
+        box-sizing: border-box;
+      
+    
+        margin-right: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    form {
+        padding: 30px 20px 10px 20px;
+    }
+
+    .text p {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 1000px)  {
+      .body {
+        display: flex;
+       flex-direction: column;
+      
+       height: 100%;
+       width: 100vw;
+       box-sizing: border-box;
+       margin:0;
+       padding:0;
+       margin-left: -40px;
+       padding-bottom: 50px;
+       /* padding:20px; */
+       justify-content: unset;
+       align-items: center;
+      }
+
+      .reactive {
+        height: 65%;
+        width: 100%;
+        box-sizing: border-box;
+      
+    
+     
+      }
+.text {
+    
+    height: 40%;
+    width: 55%;
+    color: white; 
+    /* background-color: aqua; */
+    box-sizing: border-box;
+    /* padding: 0 30px 0 0; */
+    display: flex;
+    flex-direction: column;
+    margin-left: -40px;
+  
+}
+.text  h1 {
+    text-align: center;
+    padding-left: 0;
+    margin-left:0;
+}
+.text p {
+    color: rgb(224, 226, 227);
+    padding-left: 0;
+    margin-left:0;
+}
+
+.reactive {
+ 
+    width: 80%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.trail {
+    background-color: rgb(38, 38, 139); 
+    color: white;
+    padding:30px 14px; 
+    width:100%;
+    border: none;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+ }
+
+
+
+}
+
+@media only screen and (max-width: 426px) {
+   h1 {
+    font-size: 20px;
+    margin-bottom: 5px;
+margin-right: 30px;
+    text-align: center;
+   }
+
+   .text {
+    height: 33%;
+    width:90%;
+    margin-left: 0px;
+    margin-bottom: 0;
+   }
+   .text p {
+    font-size: 12px;
+    line-height: 1.5;
+   }
+   .reactive {
+ 
+    width: 100%;
+    margin-left:50px;
+   }
+}
+
+
